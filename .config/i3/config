@@ -11,9 +11,21 @@
 
 set $mod Mod4
 
+# Color variables
+set $orangish #e27d60
+set $blueish #85cdca
+set $brownish #e8a87c
+set $purplish #c38d9e
+set $greenish #41b3a3
+
+# i3 GAPS configuration
+for_window [class=".*"] border pixel 3
+gaps outer 20
+gaps inner 20
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font Noto:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -71,10 +83,11 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+n split h
-
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split toggle
+
+# use tabbed stacking or splitv splith layout
+bindsym $mod+Shitf+v layout toggle all
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -140,25 +153,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# Colors for the borders and the background
-# class 	border backgr text   indicator child_border
-client.focused #f44242 #285577 #ffffff #2e9ef4 #285577
- workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
-
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -207,10 +201,10 @@ bar {
 	font pango:Noto Sans 11
 	separator_symbol "|<>|"
 	colors {
-		background $lightgreen	
+		background $greenish	
 		statusline #ffffff
 		separator #000000
-		focused_workspace #000000 #004628 #ffffff
+		focused_workspace #000000 $brownish #ffffff
 	}
 }
 
@@ -231,6 +225,6 @@ workspace_auto_back_and_forth yes
 # indicator - bar on the right of the client
 # child_border - left and bottom border color 
 # class 	border backgr text   indicator child_border
-client.focused #004628 #0e4773 #ffffff $saitamayellow $lightgreen
+client.focused #004628 #0e4773 #ffffff $purplish $greenish
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
 client.unfocused #333333 #b30c0c #888888 #292d2e   #222222

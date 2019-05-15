@@ -7,17 +7,21 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = false
+        colors = true
         interval = 5
 }
-order += "cpu-temperature"
+
+
+order += "volume master"
+order += "cpu_usage"
+order += "cpu_temperature 0"
 order += "ipv6"
 order += "disk /"
 order += "disk /home"
 #order += "wireless _first_"
 #order += "ethernet _first_"
 #order += "battery all"
-order += "load"
+#order += "load"
 order += "tztime local"
 
 wireless _first_ {
@@ -53,6 +57,18 @@ disk "/home" {
 	prefix_type = "custom"
 }
 
-cpu-temperature {
+cpu_temperature 0 {
 	format = "Temp.: %deegres °C"
+}
+
+cpu_usage {
+	format = "CPU: %usage"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
