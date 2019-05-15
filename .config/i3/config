@@ -4,7 +4,7 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
+# ADDDED FOR TESTING
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -42,7 +42,7 @@ font Noto:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+t exec i3-sensible-terminal
+bindsym $mod+t exec deepin-terminal
 
 # kill focused window
 bindsym $mod+q kill
