@@ -12,11 +12,17 @@
 set $mod Mod4
 
 # Color variables
+# Jelly fish theme
 set $orangish #e27d60
 set $blueish #85cdca
 set $brownish #e8a87c
 set $purplish #c38d9e
 set $greenish #41b3a3
+# Berry Blues
+set $midnightblue #1e1f26
+set $indigoink #283655
+set $blueberry #4d648d
+set $periwinkle #d0e1f9
 
 # i3 GAPS configuration
 for_window [class=".*"] border pixel 3
@@ -42,7 +48,7 @@ font Noto:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+t exec deepin-terminal
+bindsym $mod+t exec termite
 
 # kill focused window
 bindsym $mod+q kill

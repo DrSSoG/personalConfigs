@@ -40,54 +40,54 @@ scrollback_lines = 10000
 # "off", "left" or "right"
 #scrollbar = off
 [colors]
-# Base16 Eighties
-# Author: Chris Kempson (http://chriskempson.com)
+# Base16 Google Dark
+# Author: Seth Wright (http://sethawright.com)
 
-foreground          = #d3d0c8
-foreground_bold     = #e8e6df
-cursor              = #e8e6df
-cursor_foreground   = #2d2d2d
-background          = rgba(45, 45, 45)
+foreground          = #c5c8c6
+foreground_bold     = #e0e0e0
+cursor              = #e0e0e0
+cursor_foreground   = #1d1f21
+background          = rgba(29, 31, 33)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #2d2d2d
-color8  = #747369
-color7  = #d3d0c8
-color15 = #f2f0ec
+color0  = #1d1f21
+color8  = #969896
+color7  = #c5c8c6
+color15 = #ffffff
 
 # Red
-color1  = #f2777a
-color9  = #f2777a
+color1  = #CC342B
+color9  = #CC342B
 
 # Green
-color2  = #99cc99
-color10 = #99cc99
+color2  = #198844
+color10 = #198844
 
 # Yellow
-color3  = #ffcc66
-color11 = #ffcc66
+color3  = #FBA922
+color11 = #FBA922
 
 # Blue
-color4  = #6699cc
-color12 = #6699cc
+color4  = #3971ED
+color12 = #3971ED
 
 # Purple
-color5  = #cc99cc
-color13 = #cc99cc
+color5  = #A36AC7
+color13 = #A36AC7
 
 # Teal
-color6  = #66cccc
-color14 = #66cccc
+color6  = #3971ED
+color14 = #3971ED
 
 # Extra colors
-color16 = #f99157
-color17 = #d27b53
-color18 = #393939
-color19 = #515151
-color20 = #a09f93
-color21 = #e8e6df
+color16 = #F96A38
+color17 = #3971ED
+color18 = #282a2e
+color19 = #373b41
+color20 = #b4b7b4
+color21 = #e0e0e0
 # OLD CONFIG BEGINS HERE
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
