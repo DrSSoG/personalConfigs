@@ -61,7 +61,7 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # application binds
-bindsym $mod+g exec ranger #needs a fix
+bindsym $mod+g exec termite -e ranger #needs a fix
 bindsym $mod+Shift+w exec firefox
 
 # i3 lock config line#1: keybound lock line#2: autolock after 10min

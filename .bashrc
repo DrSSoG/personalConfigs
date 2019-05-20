@@ -29,6 +29,15 @@ alias py='python3'
 alias ls='ls -hN --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias ccat='highlight --out-format=ansi'
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
 
 #
 stty -ixon
