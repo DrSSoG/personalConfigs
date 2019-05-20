@@ -1,7 +1,7 @@
 " BASIC SETTINGS:
 	syntax on
 	set nocompatible
-	set history=200 "ogranicza historie do 200 poz.
+	set history=500 "ogranicza historie do 200 poz.
 	set ruler "pokazuje konkretna pozycje z prawej na pasku
 	set showcmd "pokazuje komendy zaczete
 	set encoding=utf-8
@@ -13,6 +13,11 @@
 	colorscheme peachpuff
 
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" INDENTATION CONF
+	set tabstop=4
+	set shiftwidth=4
+	set expandtab
 
 " PERSONAL KEYBINDS
 	map <C-S> <ESC>:w<Enter>
