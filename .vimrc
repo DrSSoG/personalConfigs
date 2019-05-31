@@ -21,6 +21,6 @@
 
 " PERSONAL KEYBINDS
 	map <C-S> <ESC>:w<Enter>
-
+" C compiling
 " KEYBINDS FOR LaTeX
 	let g:tex_flavor = "latex"

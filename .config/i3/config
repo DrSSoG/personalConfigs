@@ -61,13 +61,13 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # application binds
-bindsym $mod+g exec termite -e ranger #needs a fix
+bindsym $mod+g exec termite -e ranger
 bindsym $mod+Shift+w exec firefox
-
+bindsym $mod+Shift+m exec termite -e cmus
 # i3 lock config line#1: keybound lock line#2: autolock after 10min
-bindsym $mod+Shift+y exec i3lock -c 1e656d 
+bindsym $mod+Shift+y exec i3lock -c 333333 
 # -i /home/socrates/Pobrane/beautiful-wallpaper-download-17.jpg #-f #-t
-exec --no-startup-id xautolock -time 10 -locker 'i3lock -d -c 000000"
+exec --no-startup-id xautolock -time 10 -locker "i3lock -d -c 333333"
 
 # change focus
 bindsym $mod+h focus left
@@ -213,13 +213,13 @@ bar {
         status_command i3status
 	position top
 	#tray_output primary
-	font pango:Noto Sans 11
+	font pango:Noto Sans 10
 	separator_symbol "|<>|"
 	colors {
-		background $greenish	
+		background #333333
 		statusline #ffffff
-		separator #000000
-		focused_workspace #000000 $brownish #ffffff
+		separator #35bb45
+		focused_workspace #000000 #35bb45 #ffffff
 	}
 }
 
@@ -240,6 +240,6 @@ workspace_auto_back_and_forth yes
 # indicator - bar on the right of the client
 # child_border - left and bottom border color 
 # class 	border backgr text   indicator child_border
-client.focused #004628 #0e4773 #ffffff $purplish $greenish
+client.focused #004628 #0e4773 #ffffff #dd3535 #35bb45
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
 client.unfocused #333333 #b30c0c #888888 #292d2e   #222222
