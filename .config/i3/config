@@ -44,6 +44,15 @@ font Noto:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# Autostart programs
+exec feh --bg-scale ~/Obrazy/Wallpapers/thumb-1920-670899.jpg
+exec compton
+
+# Alsa controls with keyboard media buttons
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -67,7 +76,7 @@ bindsym $mod+Shift+m exec termite -e cmus
 # i3 lock config line#1: keybound lock line#2: autolock after 10min
 bindsym $mod+Shift+y exec i3lock -c 333333 
 # -i /home/socrates/Pobrane/beautiful-wallpaper-download-17.jpg #-f #-t
-exec --no-startup-id xautolock -time 10 -locker "i3lock -d -c 333333"
+exec --no-startup-id xautolock -time 15 -locker "i3lock -d -c 333333"
 
 # change focus
 bindsym $mod+h focus left
